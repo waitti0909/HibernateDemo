@@ -21,6 +21,13 @@ repositories {
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
+    
+    // MS-SQL
+    // compile group: 'net.sourceforge.jtds', name: 'jtds', version: '1.3.1'
+    
+    // POSTGRESQL
+    compile group: 'org.postgresql', name: 'postgresql', version: '9.4-1202-jdbc42'
+    
     // The production code uses the SLF4J logging API at compile time
     compile 'org.slf4j:slf4j-api:1.7.21'
 
