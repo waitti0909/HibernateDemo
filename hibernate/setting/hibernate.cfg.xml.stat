@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        
+        <!-- db p6spy setting patent_partition 
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.p6spy.engine.spy.P6SpyDriver</property>
+        <property name="hibernate.connection.url">jdbc:p6spy:postgresql://10.60.90.47:5432/patent_partition</property>
+        <property name="hibernate.connection.password">patentdata</property>
+        <property name="hibernate.connection.username">patentdata</property>
+        <property name="hibernate.default_schema">public</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.generate_statistics">true</property>
+        -->
+        
+        <!-- db hikari setting -->
+        <property name="hibernate.connection.provider_class">com.zaxxer.hikari.hibernate.HikariConnectionProvider</property>
+        <property name="hibernate.hikari.dataSourceClassName">org.postgresql.ds.PGSimpleDataSource</property>
+        <property name="hibernate.hikari.dataSource.url">jdbc:postgresql://10.60.90.47:5432/patent_partition</property>
+        <property name="hibernate.hikari.dataSource.user">patentdata</property>
+        <property name="hibernate.hikari.dataSource.password">patentdata</property>
+        <property name="hibernate.hikari.maximumPoolSize">5</property>
+        <property name="hibernate.default_schema">public</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.jdbc.batch_size">50</property>
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+        <property name="hibernate.generate_statistics">true</property>
+        
+        <!-- model setting -->
+        <mapping class="com.patentdata.model.AppCurAssignee" />
+        <mapping class="com.patentdata.model.PatRawIn" />
+        <mapping class="com.patentdata.model.PatRefRelatedChild" />
+        <mapping class="com.patentdata.model.PatPersonAgent" />
+        <mapping class="com.patentdata.model.PatPersonExaminer" />
+        <mapping class="com.patentdata.model.PatRawUs" />
+        <mapping class="com.patentdata.model.JobDataImport" />
+        <mapping class="com.patentdata.model.PatDataLog" />
+        <mapping class="com.patentdata.model.PatDataMemo" />
+        <mapping class="com.patentdata.model.PersonData" />
+        <mapping class="com.patentdata.model.PatPtopidMapping" />
+        <mapping class="com.patentdata.model.PatRefPriority" />
+        <mapping class="com.patentdata.model.JobSolrBuild" />
+        <mapping class="com.patentdata.model.PatClsFieldOfSearch" />
+        <mapping class="com.patentdata.model.PatRawTw" />
+        <mapping class="com.patentdata.model.PatRefCited" />
+        <mapping class="com.patentdata.model.PatRefCitedNplCls" />
+        <mapping class="com.patentdata.model.PatClsLoc" />
+        <mapping class="com.patentdata.model.PatClsFi" />
+        <mapping class="com.patentdata.model.PatRefCitedCls" />
+        <mapping class="com.patentdata.model.PatClsDterm" />
+        <mapping class="com.patentdata.model.SourceData" />
+        <mapping class="com.patentdata.model.PatDataTitle" />
+        <mapping class="com.patentdata.model.PatEventRecord" />
+        <mapping class="com.patentdata.model.PatRawCn" />
+        <mapping class="com.patentdata.model.PatDataClaims" />
+        <mapping class="com.patentdata.model.PatRawKr" />
+        <mapping class="com.patentdata.model.PatData" />
+        <mapping class="com.patentdata.model.PatRefPct" />
+        <mapping class="com.patentdata.model.PatClsIpc" />
+        <mapping class="com.patentdata.model.PatRawWo" />
+        <mapping class="com.patentdata.model.PatClsDi" />
+        <mapping class="com.patentdata.model.PatRefRelatedParent" />
+        <mapping class="com.patentdata.model.PatClsFterm" />
+        <mapping class="com.patentdata.model.PatPersonCorrespondenceAddr" />
+        <mapping class="com.patentdata.model.PatRawJp" />
+        <mapping class="com.patentdata.model.PatPersonAssignee" />
+        <mapping class="com.patentdata.model.PatClsEcla" />
+        <mapping class="com.patentdata.model.PatPersonApplicant" />
+        <mapping class="com.patentdata.model.AppData" />
+        <mapping class="com.patentdata.model.PatPersonInventor" />
+        <mapping class="com.patentdata.model.PatDataAmend" />
+        <mapping class="com.patentdata.model.PatDataBrief" />
+        <mapping class="com.patentdata.model.PatEventRecordChangeLog" />
+        <mapping class="com.patentdata.model.PatDataDesc" />
+        <mapping class="com.patentdata.model.PatClsCset" />
+        <mapping class="com.patentdata.model.PatClsCpc" />
+        <mapping class="com.patentdata.model.PersonLangList" />
+        <mapping class="com.patentdata.model.PatRefCitedNpl" />
+        <mapping class="com.patentdata.model.PersonLang" />
+        <mapping class="com.patentdata.model.PatRawDocdb" />
+        <mapping class="com.patentdata.model.PatRawEp" />
+        <mapping class="com.patentdata.model.PatClsUspc" />
+    </session-factory>
+</hibernate-configuration>
