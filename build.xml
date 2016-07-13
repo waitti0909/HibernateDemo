@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project default="hibernatetool" basedir="." name="misc-program">
+<project default="hibernatetool" basedir="." name="HibernateDemo">
 
     <property name="resource.dir" value="." />
     <property name="lib.dir" value="${resource.dir}/hibernate/lib" />
@@ -8,10 +8,10 @@
 
     <path id="toolslib">
         <!-- jdbc driver -->
-        <path location="${lib.dir}/postgresql-9.4-1202.jdbc42.jar.jar" />
+        <path location="${lib.dir}/postgresql-9.4-1202.jdbc42.jar" />
         <path location="${lib.dir}/hibernate-tools-4.3.1.Final.jar" />
         <path location="${lib.dir}/hibernate-core-4.3.10.Final.jar" />
-        <path location="${lib.dir}/slf4j-api-1.7.21.jar" />
+        <path location="${lib.dir}/slf4j-api-1.5.8.jar" />
         <path location="${lib.dir}/freemarker-2.3.8.jar" />
         <path location="${lib.dir}/commons-collections-3.2.1.jar" />
         <path location="${lib.dir}/antlr-2.7.7.jar" />
